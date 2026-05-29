@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Game Overview — Phantoma (Final)</title>
+<link rel="stylesheet" href="../_style.css"></head>
+<body><div class="wrap">
+<nav><a href="../">Final</a><a href="../about/">About</a><a class="here" href="../overview/">Overview</a><a href="../blog/">Blog</a><a href="../source/">Source</a><a href="../gdd/">GDD</a><a href="../../">Home</a></nav>
+<span class="tag">Final · Overview &amp; Instructions</span>
+<h1>Game Overview &amp; Instructions</h1>
+<p class="meta">Phantoma · Unity 6 LTS · URP · Cinemachine 3 · single-player explorable build</p>
+
+<h2>What It Is</h2>
+<p>Phantoma is a single-player, character-driven explorable hub. You play an expressive chibi character wandering a lit low-poly city — streets, parks, trees, a clock tower, even drifting clouds. It's a place to <em>be</em> more than a place to beat: closer in spirit to PlayStation Home or a quiet MMO lobby than a combat game. The Final build opens on a title screen, drops you into the city, and lets you walk, sprint, jump, and inspect landmarks at your own pace.</p>
+
+<h2>How to Start</h2>
+<ul>
+<li>Launch the executable (or open the Unity Play link on the <a href="../source/">Source</a> page).</li>
+<li>On the title screen, press <span class="kbd">Enter</span> / <span class="kbd">Space</span> (or click) to begin.</li>
+<li>You spawn on a city street. Explore.</li>
+</ul>
+
+<h2>Controls</h2>
+<table>
+<tr><th>Action</th><th>Input</th></tr>
+<tr><td>Move</td><td><span class="kbd">W A S D</span> / arrows / left stick</td></tr>
+<tr><td>Look (orbit camera)</td><td>Mouse / right stick</td></tr>
+<tr><td>Jump</td><td><span class="kbd">Space</span> / gamepad A</td></tr>
+<tr><td>Sprint</td><td><span class="kbd">Shift</span> (hold) / L3 — drains the blue stamina arc</td></tr>
+<tr><td>Interact</td><td><span class="kbd">E</span> / gamepad Y — when a landmark prompt appears</td></tr>
+<tr><td>Free / lock cursor</td><td><span class="kbd">Esc</span></td></tr>
+</table>
+
+<h2>Goal</h2>
+<p>There is no win condition. Progression is exploration and expression — jog the streets, find the landmarks (Notice Board, Bench, Street Sign, Clock Tower), read the little stories tucked into each, and enjoy a world tuned to feel calm and lived-in. The HUD shows HP, a stamina arc that responds to sprinting, online status, and level.</p>
+
+<h2>Source Code Breakdown — where my code is</h2>
+<p>All gameplay code is hand-written by me in C#, under <code>Assets/Scripts/</code> and <code>Assets/Editor/</code>. Unity-provided templates and packages (URP, Cinemachine, Input System, glTFast) are <strong>not</strong> counted. <strong>681 total lines written by me</strong> (529 lines excluding blanks and comments):</p>
+<table>
+<tr><th>File</th><th>What it does</th><th>Lines</th></tr>
+<tr><td><code>Scripts/PlayerController.cs</code></td><td>Camera-relative movement, walk/sprint, jump, gravity, animator Speed</td><td class="num">125</td></tr>
+<tr><td><code>Scripts/PlayerInteractor.cs</code></td><td>Nearest-landmark detection, "Press E" prompt + message HUD</td><td class="num">115</td></tr>
+<tr><td><code>Scripts/OrbitCameraRig.cs</code></td><td>Mouse/stick orbit rig that drives the Cinemachine third-person camera</td><td class="num">88</td></tr>
+<tr><td><code>Scripts/HUDController.cs</code></td><td>Stamina arc drain/regen on sprint, glow pulse</td><td class="num">74</td></tr>
+<tr><td><code>Scripts/StartMenu.cs</code></td><td>Title screen: pulse prompt, load the hub on Enter/Space/click</td><td class="num">49</td></tr>
+<tr><td><code>Scripts/Interactable.cs</code></td><td>Landmark data (prompt, title, flavor message) + interact hook</td><td class="num">29</td></tr>
+<tr><td><code>Editor/LocomotionAutoAssign.cs</code></td><td>Editor tool: auto-imports walk/run/jog FBX as humanoid + looped + in-place and rebuilds the locomotion blend tree</td><td class="num">201</td></tr>
+<tr><td><strong>Total</strong></td><td></td><td class="num"><strong>681</strong></td></tr>
+</table>
+<div class="note">The full source and both desktop builds are linked on the <a href="../source/">Source</a> page, along with the in-browser Unity Play build.</div>
+<hr>
+<p class="meta">Enhanced from the Phase&nbsp;1 draft: controls now match the shipped build, and the code breakdown reflects the real scripts and a verified 681-line count (up from the draft's estimated 340).</p>
+</div></body></html>

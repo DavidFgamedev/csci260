@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Game Overview — Phantoma</title><link rel="stylesheet" href="../_style.css"></head>
+<body><div class="wrap">
+<nav><a href="../">Phase 1</a><a href="../about/">About</a><a href="./">Overview</a><a href="../blog/">Blog</a><a href="../source/">Source</a><a href="../gdd/">GDD</a></nav>
+<h1>Game Overview & Instructions</h1>
+<p class="meta">Phantoma · Unity prototype build</p>
+<h2>What It Is</h2>
+<p>Phantoma is a multiplayer social hub world built around expressive characters and a shared explorable space. It's a place to <em>be</em> more than a place to <em>beat</em> — closer in spirit to PlayStation Home or a small MMO lobby than a combat game.</p>
+<h2>Controls</h2>
+<ul>
+<li><strong>Move</strong> — <code>W A S D</code></li>
+<li><strong>Look</strong> — Mouse</li>
+<li><strong>Jump</strong> — <code>Space</code></li>
+<li><strong>Sprint</strong> — <code>Left Shift</code></li>
+<li><strong>Emote</strong> — <code>E</code></li>
+<li><strong>Chat</strong> — <code>Enter</code></li>
+</ul>
+<h2>Goal</h2>
+<p>There is no win condition. Progression comes from exploration, expression, and finding hidden corners of the hub. The Phase 1 draft build includes the hub environment, a rigged playable character (Drippy), and the core movement system.</p>
+<h2>Source Code Breakdown</h2>
+<p>Approximately 340 lines of C# written by me for the Unity prototype. My code is primarily in:</p>
+<ul>
+<li><code>PlayerController.cs</code> — movement, camera control, input handling (~140 lines)</li>
+<li><code>HubManager.cs</code> — spawn logic, scene state (~80 lines)</li>
+<li><code>EmoteSystem.cs</code> — emote playback and input wiring (~60 lines)</li>
+<li><code>CharacterAnimator.cs</code> — state machine driver (~60 lines)</li>
+</ul>
+<p>Full source and builds on the <a href="../source/">Source Code page</a>.</p>
+</div></body></html>

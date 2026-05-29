@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Game Design Document — Phantoma (Final)</title>
+<link rel="stylesheet" href="../_style.css"></head>
+<body><div class="wrap">
+<nav><a href="../">Final</a><a href="../about/">About</a><a href="../overview/">Overview</a><a href="../blog/">Blog</a><a href="../source/">Source</a><a class="here" href="../gdd/">GDD</a><a href="../../">Home</a></nav>
+<span class="tag">Final · Game Design Document</span>
+<h1>Game Design Document</h1>
+<p class="meta">Phantoma · Final · May 28, 2026 · <a href="Phantoma-GDD-Final.pdf">Download PDF →</a></p>
+
+<div class="note"><strong>Scope note.</strong> This GDD describes the full Phantoma vision. The <strong>current shipped build is the first playable slice</strong>: a single-player, explorable lit city with one expressive character, full third-person controls, a HUD, and interactable landmarks. Multiplayer and customization are designed here as the roadmap, not yet in the build — see "Current Build" at the end.</p>
+
+<h2>1. Title</h2>
+<p>Phantoma</p>
+
+<h2>2. Genre</h2>
+<p>Social hub / explorable character showcase. Closest neighbors are social-sandbox games and lobby-based MMOs, but the playable slice leans hardest into "explorable character showcase" — wander a world, be someone in it.</p>
+
+<h2>3. Platform</h2>
+<p>Primary: <strong>PC (Windows)</strong> via itch.io and Steam — where the audience for small character-driven worlds lives and the stack iterates fastest. Secondary: <strong>Mac</strong> (the dev environment already supports it). Also shipping a <strong>WebGL</strong> build on Unity Play so anyone can try it in a browser with zero install.</p>
+
+<h2>4. Premise</h2>
+<p>A hub world where the characters have soul and the space has memory. Show up, explore, express, belong.</p>
+
+<h2>5. Backstory</h2>
+<p>Phantoma is a world between places — a quiet hub that characters drift into when they're between adventures. Nobody knows exactly how they got there, and nobody's in a hurry to leave. The world has been shaped by everyone who's passed through, so every corner holds a trace of someone who was there before you. In the playable slice, those traces are the landmarks: a notice board, a worn bench, a clock that never moves.</p>
+
+<h2>6. Target Rating</h2>
+<p>ESRB <strong>Everyone (E)</strong> for the single-player slice — no combat, no strong language, stylized and gentle. The full multiplayer vision would carry <strong>Teen (T)</strong>, driven by online interaction with other players rather than content.</p>
+
+<h2>7. Target Market</h2>
+<p>Players aged 16–30 who gravitate toward social games, character customization, and comfy experiences — overlap with the audiences for VRChat, Animal Crossing, Final Fantasy XIV social play, and PlayStation Home nostalgics. Skews toward players who value presence and expression over competition.</p>
+
+<h2>8. Player Motivation</h2>
+<p>Exploration, expression, and discovery. There's no win state — the draw is wandering, finding the hidden corners and landmarks of the hub, and (in the full vision) shaping how your character presents. Motivation comes from curiosity and belonging, not scoreboards.</p>
+
+<h2>9. Unique Selling Proposition</h2>
+<p>Phantoma's edge is <strong>character soul plus a world lit like it matters</strong>. Most hub games treat characters as dress-up dolls with canned animation; Phantoma treats every character as a performer — hand-tuned idles, walks, and jogs retargeted onto a humanoid rig — and drops them into a deep-purple, post-processed city with a camera and HUD built to make simply <em>moving around</em> feel good. The hook is that being there is the point.</p>
+
+<h2>10. Competitive Analysis</h2>
+<p><strong>VRChat</strong> — the closest spiritual competitor; social-first, expression over objectives. Strength: openness. Weakness: wildly inconsistent quality (all user-generated) and rough onboarding. Phantoma competes with a curated, consistent aesthetic and animation-quality floor.</p>
+<p><strong>Animal Crossing: New Horizons</strong> — comfy, low-stakes, expression-driven, devoted audience. Weakness: clunky, async multiplayer with no real "hanging out" layer. Phantoma keeps the comfy tone but designs for real-time presence.</p>
+<p><strong>Final Fantasy XIV (social play)</strong> — a huge share of its players socialize in hub cities rather than raid, which tells you what people want from a shared space. Weakness: it all sits on top of a massive grind and subscription. Phantoma offers the social-hub experience as the main course, stripped of the grind.</p>
+
+<h2>11. Goals</h2>
+<p>The experience I'm chasing is <strong>belonging, curiosity, and quiet joy</strong> — not excitement or tension. Closer to walking into a familiar bar where the bartender nods at you, or finding a quiet corner of a park on a good afternoon. Mood targets: warm, a little wistful, curious, inviting. The slice achieves this through deliberate animation personality, atmosphere-first lighting and color, and a design philosophy that never pressures the player toward an objective. The player's own path — where they wandered, what they read — is the content.</p>
+
+<hr>
+<h2>Current Build — First Playable Slice</h2>
+<ul>
+<li><strong>Playable:</strong> title screen → explorable low-poly city; one Mixamo-rigged chibi character.</li>
+<li><strong>Controls:</strong> WASD move, mouse-orbit camera, Space jump, Shift sprint (stamina), E to inspect landmarks, Esc cursor toggle.</li>
+<li><strong>Systems shipped:</strong> camera-relative third-person controller, custom orbit camera, locomotion blend tree (idle/jog) with an editor auto-import tool, arc HUD with live stamina, four interactable landmarks, deep-purple URP lighting + post-processing.</li>
+<li><strong>Roadmap (designed, not yet built):</strong> real-time multiplayer presence, character customization/equipment, emotes, audio atmosphere.</li>
+</ul>
+<hr>
+<p class="meta">Enhanced from the Phase&nbsp;1 draft: added the platform WebGL target, an E-rated slice rating, the USP rewritten around the shipped systems, and a "Current Build" scope section grounding items 1–11 in what actually runs.</p>
+</div></body></html>
